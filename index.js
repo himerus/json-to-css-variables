@@ -10,10 +10,6 @@ function jsonToCssVariables(json, options) {
     if (count >= offset) {
       let value = json[key]
 
-      if (!isNaN(value) && value !== 0) {
-        value += options.unit === undefined ? 'px' : options.unit
-      }
-
       output += `${options.pretty ? '  ' : ''}--${key}: ${value};${options.pretty ? '\n' : ''}`
     }
 
