@@ -14,7 +14,7 @@ function jsonToCssVariables(json, options) {
         value += options.unit === undefined ? 'px' : options.unit
       }
 
-      output += `${options.pretty ? '\t' : ''}--${key}: ${value};${options.pretty ? '\n' : ''}`
+      output += `${options.pretty ? '  ' : ''}--${key}: ${value};${options.pretty ? '\n' : ''}`
     }
 
     count++
